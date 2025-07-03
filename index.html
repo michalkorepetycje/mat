@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Korepetycje z Matematyki – 1 LO</title>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --text: #333;
+      --accent: #0059b3;
+      --link: #0059b3;
+      --box: #e6f0ff;
+      --footer: #222;
+      --footer-text: #ddd;
+      --header: #0059b3;
+    }
+
+    body.dark {
+      --bg: #121212;
+      --text: #f0f0f0;
+      --accent: #4da6ff;
+      --link: #66ccff;
+      --box: #1f2a3a;
+      --footer: #1a1a1a;
+      --footer-text: #bbb;
+      --header: #1e1e2f;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: var(--header);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      color: var(--header);
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: var(--accent);
+      border-bottom: 2px solid var(--box);
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .cennik li {
+      background: var(--box);
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    footer {
+      background-color: var(--footer);
+      color: var(--footer-text);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 Korepetycje Online z Matematyki</h1>
+    <p>Prowadzone przez ucznia 1 klasy LO o profilu mat-fiz-inf</p>
+    <button class="toggle-btn" onclick="toggleTheme()">🌙 Tryb ciemny</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>🧠 O mnie</h2>
+      <p>Cześć! Jestem uczniem pierwszej klasy liceum ogólnokształcącego o profilu matematyczno-fizyczno-informatycznym. Uwielbiam tłumaczyć matematykę w prosty sposób – zrozumiale, bez stresu i zbędnej teorii. Jeśli masz problem ze zrozumieniem zadań, przygotowujesz się do sprawdzianu lub potrzebujesz systematycznych powtórek — dobrze trafiłeś!</p>
+    </section>
+
+    <section class="cennik">
+      <h2>💰 Cennik</h2>
+      <ul>
+        <li>✅ 30 minut – 15 zł</li>
+        <li>✅ 45 minut – 20 zł</li>
+        <li>✅ 60 minut – 25 zł</li>
+        <li>📄 Zestaw zadań PDF z wyjaśnieniem – 5 zł</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📩 Kontakt</h2>
+      <p>Zapisy i pytania:</p>
+      <ul>
+        <li>✉️ E-mail: <a href="mailto:michal.mat.korepetycje@gmail.com">michal.mat.korepetycje@gmail.com</a></li>
+        <li>💬 Discord: michal.list</li>
+        <li>📅 Możliwość zajęć: pon–sob, godziny do ustalenia</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Korepetycje z Matematyki – Uczeń 1 LO mat-fiz-inf. Wszelkie prawa zastrzeżone.
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      const btn = document.querySelector('.toggle-btn');
+      const isDark = document.body.classList.contains('dark');
+      btn.textContent = isDark ? '☀️ Tryb jasny' : '🌙 Tryb ciemny';
+    }
+  </script>
+
+</body>
+</html>
