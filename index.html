@@ -36,6 +36,12 @@
       padding: 0;
       transition: background-color 0.3s, color 0.3s;
     }
+    
+        .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
     header {
       background-color: var(--header);
@@ -108,7 +114,7 @@
   </style>
 </head>
 <body>
-
+  <div class="wrapper">
   <header>
     <h1>📚 Korepetycje Online z Matematyki</h1>
     <p>Prowadzone przez ucznia 1 klasy LO o profilu mat-fiz-inf</p>
@@ -145,7 +151,8 @@
   <footer>
     &copy; 2025 Korepetycje z Matematyki – Uczeń 1 LO mat-fiz-inf. Wszelkie prawa zastrzeżone.
   </footer>
-
+  </div>
+  
   <script>
     function toggleTheme() {
       document.body.classList.toggle('dark');
